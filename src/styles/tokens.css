@@ -1,0 +1,96 @@
+/**
+ * Jetons de design. Aucune couleur, rayon ou ombre ne doit être écrit en dur ailleurs.
+ *
+ * Le thème sombre est la valeur par défaut (le design est pensé sombre d'abord).
+ * `[data-theme="light"]` est posé sur <html> par ThemeProvider et ne redéfinit que les couleurs.
+ */
+
+:root {
+    /* Surfaces */
+    --bg: #0b0d10;
+    --bg-soft: #0f1216;
+    --surface: #14181e;
+    --surface-2: #1a1f27;
+    --surface-hover: #1f2530;
+
+    /* Texte */
+    --text: #f2f4f7;
+    --text-muted: #98a2b3;
+    --text-faint: #667085;
+
+    /* Accent : vert électrique, conservé identique dans les deux thèmes pour l'identité.
+       --accent sert aux aplats, --accent-text au texte posé sur --bg (contraste vérifié). */
+    --accent: #c8ff2e;
+    --accent-text: #c8ff2e;
+    --accent-soft: rgba(200, 255, 46, 0.12);
+    --accent-ring: rgba(200, 255, 46, 0.45);
+    --on-accent: #0b0d10;
+
+    /* Traits */
+    --border: rgba(255, 255, 255, 0.09);
+    --border-strong: rgba(255, 255, 255, 0.18);
+    --rule: rgba(255, 255, 255, 0.06);
+
+    /* États */
+    --danger: #ff6b6b;
+    --success: #7ee787;
+
+    /* Ombres */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 28px 70px rgba(0, 0, 0, 0.5);
+
+    /* Typographie */
+    --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+    /* Rythme */
+    --content-width: 1080px;
+    --gutter: clamp(1.25rem, 5vw, 3rem);
+    --section-gap: clamp(4.5rem, 11vw, 8.5rem);
+
+    /* Rayons */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --radius-pill: 999px;
+
+    /* Mouvement */
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --reveal-duration: 700ms;
+
+    color-scheme: dark;
+}
+
+[data-theme='light'] {
+    --bg: #fbfbf9;
+    --bg-soft: #f5f5f1;
+    --surface: #ffffff;
+    --surface-2: #f4f5f1;
+    --surface-hover: #eceee7;
+
+    --text: #0b0d10;
+    --text-muted: #545c69;
+    --text-faint: #79818e;
+
+    --accent: #c8ff2e;
+    /* Le vert vif est illisible en texte sur fond clair : version assombrie, contraste AA. */
+    --accent-text: #4c6a00;
+    --accent-soft: rgba(122, 168, 0, 0.16);
+    --accent-ring: rgba(122, 168, 0, 0.45);
+    --on-accent: #0b0d10;
+
+    --border: rgba(11, 13, 16, 0.12);
+    --border-strong: rgba(11, 13, 16, 0.26);
+    --rule: rgba(11, 13, 16, 0.08);
+
+    --danger: #b3261e;
+    --success: #1b6b2f;
+
+    --shadow-sm: 0 2px 8px rgba(11, 13, 16, 0.06);
+    --shadow-md: 0 12px 32px rgba(11, 13, 16, 0.08);
+    --shadow-lg: 0 28px 70px rgba(11, 13, 16, 0.12);
+
+    color-scheme: light;
+}

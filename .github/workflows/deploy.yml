@@ -24,7 +24,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # Vite 7 exige ^20.19.0 || >=22.12.0 ; 22 est la version validée en local.
+          node-version: 22
           cache: npm
 
       - run: npm ci
